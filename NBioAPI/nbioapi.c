@@ -90,7 +90,7 @@ static PyObject *nbioapi_match(PyObject *self, PyObject *args) {
 
 static PyMethodDef NBioAPIMethods[] = {
         {"init",      (PyCFunction) nbioapi_init, METH_NOARGS,  "Init module"},
-        {"terminate", nbioapi_terminate,          METH_NOARGS, "Terminate module"},
+        {"terminate", (PyCFunction) nbioapi_terminate,          METH_NOARGS, "Terminate module"},
         {"match",     nbioapi_match,              METH_VARARGS, "Match fir"},
         {NULL, NULL,                              0, NULL}
 };
